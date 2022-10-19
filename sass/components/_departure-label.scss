@@ -1,0 +1,13 @@
+.departure-label {
+  border-radius: 11px;
+  background-color: var(--departure-label-bg-color);
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: var(--departure-label-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.3rem;
+  height: 2.4rem;
+}

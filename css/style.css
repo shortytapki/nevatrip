@@ -1,0 +1,202 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 375px;
+  padding: 2.7rem 0 3rem;
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.card {
+  border: var(--border-thickness-mob) solid var(--border-color-mob);
+  min-height: 60.3rem;
+  max-width: 34.1rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+.card--mobile-1::after {
+  content: "Новинка";
+  height: 3.5rem;
+  width: 9.9rem;
+  background-color: var(--label-bg-color-yellow);
+  color: var(--label-color-gray-1);
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: absolute;
+  top: 4rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card--mobile-2::after {
+  content: "Новинка";
+  height: 4.3rem;
+  width: 12.9rem;
+  background-color: var(--label-bg-color-purple);
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  line-height: 2rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px 0px 12px;
+}
+.card__header-img {
+  height: 22rem;
+  width: 34.1rem;
+}
+.card .duration {
+  margin: -0.3rem 1.2rem 1.5rem;
+  display: flex;
+  gap: 0.9rem;
+}
+.card .duration__image {
+  padding-top: 1.6rem;
+}
+.card .duration__txt {
+  padding-top: 1.4rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  height: 1.6rem;
+  color: var(--duration-txt-color);
+}
+.card .special-offer {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  color: var(--subheading-color);
+  margin: 0 1.2rem 1.6rem;
+}
+.card .departures {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 0.6rem;
+}
+.card .trip-features {
+  margin: 0 2rem 3.5rem 1.3rem;
+}
+.card .trip-features__item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: var(--list-item-color);
+}
+.card .trip-features__item--mb-1 {
+  margin-bottom: 0.9rem;
+}
+.card .trip-features__item--mb-2 {
+  margin-bottom: 1.1rem;
+}
+.card .trip-features__item--mb-3 {
+  margin-bottom: 1.3rem;
+}
+.card .trip-features__item .last-item-image {
+  align-self: flex-start;
+  margin-top: 0.4rem;
+}
+
+.departure-label {
+  border-radius: 11px;
+  background-color: var(--departure-label-bg-color);
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: var(--departure-label-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.3rem;
+  height: 2.4rem;
+}
+
+.card-footer {
+  margin: 0 1.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.4rem;
+}
+.card-footer .price {
+  font-size: 3rem;
+  line-height: 2rem;
+  height: 2.3rem;
+  color: var(--black);
+}
+.card-footer .pier-buy {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.card-footer .button {
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16.5rem;
+  height: 4.4rem;
+  background-color: var(--label-bg-color-yellow);
+  border: var(--border-thickness-desktop) solid var(--button-border-color);
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: var(--subheading-color);
+}
+.card-footer .auto-height {
+  height: auto;
+  max-width: 13rem;
+}
+
+:root {
+  --border-thickness-mob: 0.3px;
+  --border-thickness-desktop: 0.5px;
+  --border-color-mob: #828282;
+  --border-color-desk: #8e8e8e;
+  --duration-txt-color: #9e9e9e;
+  --subheading-color: #404040;
+  --list-item-color: #4b4b4b;
+  --label-bg-color-yellow: #fed74b;
+  --label-color-gray-1: #3e3e3e;
+  --label-bg-color-purple: #7553ff;
+  --departure-label-bg-color: #d9e8ff;
+  --departure-label-color: #343434;
+  --button-border-color: #cba500;
+  --white: #fff;
+  --black: #000;
+}
+
+/*# sourceMappingURL=style.css.map */

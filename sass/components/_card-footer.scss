@@ -1,0 +1,38 @@
+.card-footer {
+  margin: 0 1.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.4rem;
+
+  .price {
+    font-size: 3rem;
+    line-height: 2rem;
+    height: 2.3rem;
+    color: var(--black);
+  }
+
+  .pier-buy {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .button {
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16.5rem;
+    height: 4.4rem;
+    background-color: var(--label-bg-color-yellow);
+    border: var(--border-thickness-desktop) solid var(--button-border-color);
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: var(--subheading-color);
+  }
+
+  .auto-height {
+    height: auto;
+    max-width: 13rem;
+  }
+}
