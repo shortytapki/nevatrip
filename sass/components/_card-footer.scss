@@ -29,6 +29,12 @@
     font-size: 1.4rem;
     line-height: 2rem;
     color: var(--subheading-color);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: var(--label-bg-color-shade);
+      cursor: pointer;
+    }
   }
 
   .auto-height {

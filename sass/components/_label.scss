@@ -14,3 +14,28 @@
   justify-content: center;
   align-items: center;
 }
+
+[label-style='1']::after {
+  @include label(
+    var(--label-bg-color-yellow),
+    var(--label-color-gray-1),
+    4rem,
+    3.5rem,
+    9.9rem,
+    1.2rem,
+    'Новинка'
+  );
+}
+
+[label-style='2']::after {
+  @include label(
+    var(--label-bg-color-purple),
+    var(--white),
+    0,
+    4.3rem,
+    12.9rem,
+    1.4rem,
+    'Новинка'
+  );
+  border-radius: 15px 0px 12px;
+}

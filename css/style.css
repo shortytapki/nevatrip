@@ -20,62 +20,23 @@ ul {
 }
 
 .container {
-  width: 375px;
-  padding: 2.7rem 0 3rem;
+  padding: 2.7rem 0;
   display: flex;
-  gap: 3rem;
   flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
+  align-items: center;
+  gap: 3rem;
+  min-width: 37.5rem;
 }
 
 .card {
   border: var(--border-thickness-mob) solid var(--border-color-mob);
-  min-height: 60.3rem;
-  max-width: 34.1rem;
+  height: 60.3rem;
+  width: 34.1rem;
   display: flex;
   flex-direction: column;
   border-radius: 16px;
   overflow: hidden;
   position: relative;
-  margin: 0 auto;
-}
-.card--mobile-1::after {
-  content: "Новинка";
-  height: 3.5rem;
-  width: 9.9rem;
-  background-color: var(--label-bg-color-yellow);
-  color: var(--label-color-gray-1);
-  font-size: 1.2rem;
-  font-weight: 600;
-  position: absolute;
-  top: 4rem;
-  line-height: 2rem;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.card--mobile-2::after {
-  content: "Новинка";
-  height: 4.3rem;
-  width: 12.9rem;
-  background-color: var(--label-bg-color-purple);
-  color: var(--white);
-  font-size: 1.4rem;
-  font-weight: 600;
-  position: absolute;
-  top: 0;
-  line-height: 2rem;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px 0px 12px;
-}
-.card__header-img {
-  height: 22rem;
-  width: 34.1rem;
 }
 .card .duration {
   margin: -0.3rem 1.2rem 1.5rem;
@@ -132,6 +93,41 @@ ul {
   margin-top: 0.4rem;
 }
 
+[label-style="1"]::after {
+  content: "Новинка";
+  height: 3.5rem;
+  width: 9.9rem;
+  background-color: var(--label-bg-color-yellow);
+  color: var(--label-color-gray-1);
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: absolute;
+  top: 4rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+[label-style="2"]::after {
+  content: "Новинка";
+  height: 4.3rem;
+  width: 12.9rem;
+  background-color: var(--label-bg-color-purple);
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  line-height: 2rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px 0px 12px;
+}
+
 .departure-label {
   border-radius: 11px;
   background-color: var(--departure-label-bg-color);
@@ -175,6 +171,11 @@ ul {
   font-size: 1.4rem;
   line-height: 2rem;
   color: var(--subheading-color);
+  transition: all 0.3s ease;
+}
+.card-footer .button:hover {
+  background-color: var(--label-bg-color-shade);
+  cursor: pointer;
 }
 .card-footer .auto-height {
   height: auto;
@@ -185,11 +186,12 @@ ul {
   --border-thickness-mob: 0.3px;
   --border-thickness-desktop: 0.5px;
   --border-color-mob: #828282;
-  --border-color-desk: #8e8e8e;
+  --border-color-desktop: #8e8e8e;
   --duration-txt-color: #9e9e9e;
   --subheading-color: #404040;
   --list-item-color: #4b4b4b;
   --label-bg-color-yellow: #fed74b;
+  --label-bg-color-shade: #e5c244;
   --label-color-gray-1: #3e3e3e;
   --label-bg-color-purple: #7553ff;
   --departure-label-bg-color: #d9e8ff;
@@ -197,6 +199,21 @@ ul {
   --button-border-color: #cba500;
   --white: #fff;
   --black: #000;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    gap: 5.9rem;
+    padding: 6.7rem 18.4rem;
+    min-width: 144rem;
+  }
+  .card {
+    min-width: 107rem;
+    height: 37rem;
+    flex-direction: row;
+    border: var(--border-thickness-desktop) solid var(--border-color-desktop);
+    border-radius: 15px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

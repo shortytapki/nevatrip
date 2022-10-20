@@ -1,0 +1,15 @@
+@media screen and (min-width: 1440px) {
+  .container {
+    gap: 5.9rem;
+    padding: 6.7rem 18.4rem;
+    min-width: 144rem;
+  }
+
+  .card {
+    min-width: 107rem;
+    height: 37rem;
+    flex-direction: row;
+    border: var(--border-thickness-desktop) solid var(--border-color-desktop);
+    border-radius: 15px;
+  }
+}
