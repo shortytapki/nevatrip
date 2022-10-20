@@ -1,4 +1,14 @@
-@mixin label($bg-color, $color, $top, $height, $width, $font-size, $content) {
+@use '../layout/' as lt;
+
+@mixin cardLabel(
+  $bg-color,
+  $color,
+  $top,
+  $height,
+  $width,
+  $font-size,
+  $content
+) {
   content: $content;
   height: $height;
   width: $width;
@@ -10,13 +20,20 @@
   top: $top;
   line-height: 2rem;
   text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include lt.flex(row, $alignment: center, $justify: center);
+}
+
+@mixin defaultLabel($bg-color, $color, $height, $width, $radius) {
+  height: $height;
+  width: $width;
+  background-color: $bg-color;
+  color: $color;
+  border-radius: $radius;
+  @include lt.flex(row, $alignment: center, $justify: center);
 }
 
 [label-style='1']::after {
-  @include label(
+  @include cardLabel(
     var(--label-bg-color-yellow),
     var(--label-color-gray-1),
     4rem,
@@ -28,7 +45,7 @@
 }
 
 [label-style='2']::after {
-  @include label(
+  @include cardLabel(
     var(--label-bg-color-purple),
     var(--white),
     0,

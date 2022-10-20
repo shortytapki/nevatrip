@@ -1,9 +1,13 @@
+@use '../layout/' as lt;
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 html {
@@ -20,9 +24,6 @@ ul {
 
 .container {
   padding: 2.7rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3rem;
+  @include lt.flex(column, center, $gap: 3rem);
   min-width: 37.5rem;
 }
