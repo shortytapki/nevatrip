@@ -26,4 +26,5 @@ ul {
   padding: 2.7rem 0;
   @include lt.flex(column, center, $gap: 3rem);
   min-width: 37.5rem;
+  margin: 0 auto;
 }
