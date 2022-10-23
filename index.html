@@ -17,12 +17,12 @@
     <main class="container">
       <div class="card" label-style="1">
         <img
-          src="assets/images/desktop/desk-img-1.webp"
+          src="assets/images/mob/card-mob.webp"
           alt=""
           srcset="
-            assets/images/desktop/desk-img-1.webp    1x,
-            assets/images/desktop/desk-img-1@2x.webp 2x,
-            assets/images/desktop/desk-img-1@3x.webp 3x
+            assets/images/mob/card-mob.webp        1x,
+            assets/images/mob/card-mob.webp2x.webp 2x,
+            assets/images/mob/card-mob.webp3x.webp 3x
           "
           class="card__img"
         />
@@ -48,15 +48,24 @@
               <img src="assets/svg/bullet-point.svg" alt="" />
               <p>6 остановок у главных достопримечательностей</p>
             </li>
-            <li class="features__point features__point--departures">
+            <li class="features__point">
               <img src="assets/svg/bullet-point.svg" alt="" />
-              <p>Ближайший рейс сегодня</p>
-              <span class="features__point-time">12:00</span>
-              <!-- <span class="features__point-time">12:00</span>
-              <span class="features__point-time">12:00</span>
-              <span class="features__point-time">12:00</span> -->
+              <div class="departures">
+                <span>Ближайший рейс сегодня</span>
+                <span class="departures__time">12:00</span>
+                <span class="departures__time">12:00</span>
+                <span class="departures__time">12:00</span>
+                <span class="departures__time">12:00</span>
+              </div>
             </li>
           </ul>
+          <footer class="card-footer">
+            <div class="auto-height">
+              <p class="price">900₽</p>
+              <p class="pier-buy">1200₽ на причале</p>
+            </div>
+            <button class="button">Подробнее</button>
+          </footer>
         </div>
       </div>
       <div class="card" label-style="2">

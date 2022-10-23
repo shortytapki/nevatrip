@@ -1,9 +1,8 @@
+@use '../layout/' as lt;
+
 .card-footer {
-  margin: 0 1.9rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 1.4rem;
+  @include lt.flex(row, $justify: space-between);
+  padding: 0 0.5rem;
 
   .price {
     font-size: 3rem;
@@ -14,7 +13,7 @@
 
   .pier-buy {
     font-size: 1rem;
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
   }
 
   .button {
