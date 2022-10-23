@@ -9,6 +9,12 @@
   overflow: hidden;
   position: relative;
 
+  &__img {
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.06);
+  }
+
   .description-container {
     padding: 1.6rem 1.2rem 1.9rem;
     @include lt.flex(column);

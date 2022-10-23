@@ -70,6 +70,25 @@ ul {
   border-radius: 15px 0px 12px;
 }
 
+[label-style="3"]::after {
+  content: "Новинка";
+  height: 4.2rem;
+  width: 15.4rem;
+  background-color: var(--label-3-bg-color);
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: 600;
+  position: absolute;
+  top: 4.6rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  align-items: center;
+  gap: unset;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+
 .card {
   border: var(--border-thickness-mob) solid var(--border-color-mob);
   min-height: 60.3rem;
@@ -82,6 +101,11 @@ ul {
   border-radius: 16px;
   overflow: hidden;
   position: relative;
+}
+.card__img {
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.06);
 }
 .card .description-container {
   padding: 1.6rem 1.2rem 1.9rem;
@@ -257,11 +281,97 @@ ul {
   --label-bg-color-purple: #7553ff;
   --departure-label-bg-color: #d9e8ff;
   --departure-label-color: #343434;
+  --label-3-bg-color: #099ce8;
   --button-border-color: #cba500;
   --time-label-active-bg-color: #6ba6ff;
   --button-2-bg-color: #fed74b;
+  --button-desk-bg-color: #ffd83c;
+  --button-desk-color: #292929;
   --white: #fff;
   --black: #000;
+}
+
+@media screen and (min-width: 972px) {
+  .container {
+    gap: 5.9rem;
+    min-width: 144rem;
+    padding: 6.7rem 0;
+  }
+  [label-style="1"]::after {
+    width: 18rem;
+    height: 4.5rem;
+    font-size: 1.6rem;
+    top: 7.2rem;
+    content: "круглый год";
+  }
+  .card {
+    width: 107rem;
+    min-height: 37rem;
+    flex-direction: row;
+    border: var(--border-thickness-desktop) solid var(--border-color-desktop);
+    border-radius: 15px;
+  }
+  .card__img {
+    max-width: 47.3rem;
+    transform: none;
+  }
+  .card .description-container {
+    padding: 1.6rem 2.3rem 1.9rem;
+  }
+  .card .heading {
+    font-weight: 400;
+    font-size: 2.6rem;
+    line-height: 3.4rem;
+    color: var(--black);
+    order: -1;
+    margin-bottom: 1.3rem;
+  }
+  .card .duration {
+    margin-bottom: 1.9rem;
+  }
+  .card .features__point--mb-1 {
+    margin-bottom: 2.1rem;
+  }
+  .card .features__point--mb-2 {
+    margin-bottom: 2.4rem;
+  }
+  .card .features__point--mb-3 {
+    margin-bottom: 2.7rem;
+  }
+  .card .features .departures {
+    align-items: center;
+    margin-top: -0.3rem;
+  }
+  .card .features .departures span:first-child {
+    width: max-content;
+    margin-right: 0.5rem;
+  }
+  .card .card-footer {
+    justify-content: flex-start;
+    padding: 0;
+    gap: 1.3rem;
+  }
+  .card .card-footer .button, .card .card-footer--btn-2 {
+    border: none;
+    border-radius: 2.3rem;
+    align-items: center;
+    gap: unset;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    width: 18.7rem;
+    height: 5.2rem;
+    background-color: var(--button-desk-bg-color);
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    color: var(--button-desk-color);
+    transition: all 0.3s ease;
+  }
+  .card .card-footer .button:hover, .card .card-footer--btn-2:hover {
+    background-color: var(--label-bg-color-shade);
+    cursor: pointer;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -56,3 +56,15 @@
   );
   border-radius: 15px 0px 12px;
 }
+
+[label-style='3']::after {
+  @include cardLabel(
+    var(--label-3-bg-color),
+    var(--white),
+    4.6rem,
+    4.2rem,
+    15.4rem,
+    1.6rem,
+    'Новинка'
+  );
+}
