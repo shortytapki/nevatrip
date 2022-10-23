@@ -10,9 +10,11 @@
   position: relative;
 
   &__img {
+    min-height: fit-content;
     object-fit: cover;
     object-position: center;
     transform: scale(1.06);
+    transition: all 0.3s ease;
   }
 
   .description-container {
@@ -91,6 +93,10 @@
             color: var(--white);
             border-radius: 11px;
             cursor: pointer;
+          }
+
+          &--hidden {
+            display: none;
           }
         }
       }

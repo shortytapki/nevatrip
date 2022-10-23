@@ -103,9 +103,11 @@ ul {
   position: relative;
 }
 .card__img {
+  min-height: fit-content;
   object-fit: cover;
   object-position: center;
   transform: scale(1.06);
+  transition: all 0.3s ease;
 }
 .card .description-container {
   padding: 1.6rem 1.2rem 1.9rem;
@@ -193,6 +195,9 @@ ul {
   color: var(--white);
   border-radius: 11px;
   cursor: pointer;
+}
+.card .features__point .departures__time--hidden {
+  display: none;
 }
 
 .card-footer {

@@ -26,6 +26,7 @@
           "
           class="card__img"
         />
+
         <div class="description-container">
           <div class="duration">
             <img src="assets/svg/clock.svg" alt="" class="duration__icon" />
@@ -79,6 +80,7 @@
           "
           class="card__img"
         />
+
         <div class="description-container">
           <div class="duration">
             <img src="assets/svg/clock.svg" alt="" class="duration__icon" />
@@ -132,6 +134,7 @@
           "
           class="card__img"
         />
+
         <div class="description-container">
           <div class="duration">
             <img src="assets/svg/clock.svg" alt="" class="duration__icon" />
@@ -161,7 +164,27 @@
                 <span class="departures__time">12:00</span>
                 <span class="departures__time">12:00</span>
                 <span class="departures__time">12:00</span>
-                <span class="departures__time">еще...</span>
+                <span
+                  class="departures__time departures__time--hidden"
+                  id="hidden"
+                  >12:00</span
+                >
+                <span
+                  class="departures__time departures__time--hidden"
+                  id="hidden"
+                  >12:00</span
+                >
+                <span
+                  class="departures__time departures__time--hidden"
+                  id="hidden"
+                  >12:00</span
+                >
+                <span class="departures__time" id="reveal">еще...</span>
+                <span
+                  class="departures__time departures__time--hidden"
+                  id="hide"
+                  >скрыть</span
+                >
               </div>
             </li>
           </ul>
@@ -175,5 +198,6 @@
         </div>
       </div>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
