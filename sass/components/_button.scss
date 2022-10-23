@@ -1,0 +1,27 @@
+@use '../layout/' as lt;
+
+@mixin button(
+  $border-radius,
+  $width,
+  $height,
+  $bg-color,
+  $font-weight,
+  $font-size,
+  $color
+) {
+  border-radius: $border-radius;
+  @include lt.flex(row, $alignment: center, $justify: center);
+  width: $width;
+  height: $height;
+  background-color: $bg-color;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: 2rem;
+  color: $color;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: var(--label-bg-color-shade);
+    cursor: pointer;
+  }
+}

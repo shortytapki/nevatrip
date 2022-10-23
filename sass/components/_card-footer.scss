@@ -1,7 +1,8 @@
 @use '../layout/' as lt;
+@use './button' as set;
 
 .card-footer {
-  @include lt.flex(row, $justify: space-between);
+  @include lt.flex(row, $justify: space-between, $alignment: flex-start);
   padding: 0 0.5rem;
 
   .price {
@@ -9,6 +10,15 @@
     line-height: 2rem;
     height: 2.3rem;
     color: var(--black);
+    margin-top: 0.1rem;
+  }
+
+  &:has(.pier-buy) {
+    align-items: center;
+
+    .button {
+      align-self: flex-start;
+    }
   }
 
   .pier-buy {
@@ -17,24 +27,47 @@
   }
 
   .button {
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 16.5rem;
-    height: 4.4rem;
-    background-color: var(--label-bg-color-yellow);
+    @include set.button(
+      2rem,
+      16.5rem,
+      4.4rem,
+      var(--label-bg-color-yellow),
+      400,
+      1.4rem,
+      var(--subheading-color)
+    );
     border: var(--border-thickness-desktop) solid var(--button-border-color);
-    font-size: 1.4rem;
-    line-height: 2rem;
-    color: var(--subheading-color);
-    transition: all 0.3s ease;
 
-    &:hover {
-      background-color: var(--label-bg-color-shade);
-      cursor: pointer;
+    &--btn-2 {
+      @include set.button(
+        1rem,
+        19.3rem,
+        4.4rem,
+        var(--button-2-bg-color),
+        600,
+        1.4rem,
+        var(--subheading-color)
+      );
+      border: var(--border-thickness-desktop) solid var(--button-border-color);
     }
   }
+
+  // border-radius: 20px;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // width: 16.5rem;
+  // height: 4.4rem;
+  // background-color: var(--label-bg-color-yellow);
+  // ;
+  // font-size: 1.4rem;
+  // line-height: 2rem;
+  // color: var(--subheading-color);
+  // transition: all 0.3s ease;
+  // &:hover {
+  //   background-color: var(--label-bg-color-shade);
+  //   cursor: pointer;
+  // }
 
   .auto-height {
     height: auto;

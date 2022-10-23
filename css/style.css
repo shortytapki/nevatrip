@@ -172,7 +172,7 @@ ul {
 }
 
 .card-footer {
-  align-items: unset;
+  align-items: flex-start;
   gap: unset;
   justify-content: space-between;
   display: flex;
@@ -184,26 +184,57 @@ ul {
   line-height: 2rem;
   height: 2.3rem;
   color: var(--black);
+  margin-top: 0.1rem;
+}
+.card-footer:has(.pier-buy) {
+  align-items: center;
+}
+.card-footer:has(.pier-buy) .button {
+  align-self: flex-start;
 }
 .card-footer .pier-buy {
   font-size: 1rem;
   margin-top: 0.2rem;
 }
 .card-footer .button {
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
+  border-radius: 2rem;
   align-items: center;
+  gap: unset;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
   width: 16.5rem;
   height: 4.4rem;
   background-color: var(--label-bg-color-yellow);
-  border: var(--border-thickness-desktop) solid var(--button-border-color);
+  font-weight: 400;
   font-size: 1.4rem;
   line-height: 2rem;
   color: var(--subheading-color);
   transition: all 0.3s ease;
+  border: var(--border-thickness-desktop) solid var(--button-border-color);
 }
 .card-footer .button:hover {
+  background-color: var(--label-bg-color-shade);
+  cursor: pointer;
+}
+.card-footer .button--btn-2 {
+  border-radius: 1rem;
+  align-items: center;
+  gap: unset;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  width: 19.3rem;
+  height: 4.4rem;
+  background-color: var(--button-2-bg-color);
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: var(--subheading-color);
+  transition: all 0.3s ease;
+  border: var(--border-thickness-desktop) solid var(--button-border-color);
+}
+.card-footer .button--btn-2:hover {
   background-color: var(--label-bg-color-shade);
   cursor: pointer;
 }
@@ -228,6 +259,7 @@ ul {
   --departure-label-color: #343434;
   --button-border-color: #cba500;
   --time-label-active-bg-color: #6ba6ff;
+  --button-2-bg-color: #fed74b;
   --white: #fff;
   --black: #000;
 }
