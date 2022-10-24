@@ -32,7 +32,7 @@
   @include lt.flex(row, $alignment: center, $justify: center);
 }
 
-[label-style='1']::after {
+[label-style='1-mob']::after {
   @include cardLabel(
     var(--label-bg-color-yellow),
     var(--label-color-gray-1),
@@ -44,7 +44,7 @@
   );
 }
 
-[label-style='2']::after {
+[label-style='2-mob']::after {
   @include cardLabel(
     var(--label-bg-color-purple),
     var(--white),
@@ -57,7 +57,7 @@
   border-radius: 15px 0px 12px;
 }
 
-[label-style='3']::after {
+[label-style='1-desk']::after {
   @include cardLabel(
     var(--label-3-bg-color),
     var(--white),
@@ -68,3 +68,19 @@
     'Новинка'
   );
 }
+
+[label-style='2-desk']::after {
+  @include cardLabel(
+    var(--label-bg-color-yellow),
+    var(--label-color-gray-1),
+    7.2rem,
+    4.5rem,
+    18rem,
+    1.6rem,
+    'Круглый год'
+  );
+}
+// width: 18rem;
+// height: 4.5rem;
+// font-size: 1.6rem;
+// top: 7.2rem;

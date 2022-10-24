@@ -37,19 +37,20 @@
       var(--subheading-color)
     );
     border: var(--border-thickness-desktop) solid var(--button-border-color);
+  }
 
-    &--btn-2 {
-      @include set.button(
-        1rem,
-        19.3rem,
-        4.4rem,
-        var(--button-2-bg-color),
-        600,
-        1.4rem,
-        var(--subheading-color)
-      );
-      border: var(--border-thickness-desktop) solid var(--button-border-color);
-    }
+  [btn-style='rect'] {
+    @include set.button(
+      1rem,
+      19.3rem,
+      4.4rem,
+      var(--button-2-bg-color),
+      600,
+      1.4rem,
+      var(--subheading-color)
+    );
+    border: var(--border-thickness-desktop) solid var(--button-border-color);
+    border-radius: 10px;
   }
 
   // border-radius: 20px;

@@ -32,7 +32,7 @@ ul {
   margin: 0 auto;
 }
 
-[label-style="1"]::after {
+[label-style="1-mob"]::after {
   content: "Новинка";
   height: 3.5rem;
   width: 9.9rem;
@@ -51,7 +51,7 @@ ul {
   flex-direction: row;
 }
 
-[label-style="2"]::after {
+[label-style="2-mob"]::after {
   content: "Новинка";
   height: 4.3rem;
   width: 12.9rem;
@@ -71,7 +71,7 @@ ul {
   border-radius: 15px 0px 12px;
 }
 
-[label-style="3"]::after {
+[label-style="1-desk"]::after {
   content: "Новинка";
   height: 4.2rem;
   width: 15.4rem;
@@ -81,6 +81,25 @@ ul {
   font-weight: 600;
   position: absolute;
   top: 4.6rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  align-items: center;
+  gap: unset;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+
+[label-style="2-desk"]::after {
+  content: "Круглый год";
+  height: 4.5rem;
+  width: 18rem;
+  background-color: var(--label-bg-color-yellow);
+  color: var(--label-color-gray-1);
+  font-size: 1.6rem;
+  font-weight: 600;
+  position: absolute;
+  top: 7.2rem;
   line-height: 2rem;
   text-transform: uppercase;
   align-items: center;
@@ -247,7 +266,7 @@ ul {
   background-color: var(--label-bg-color-shade);
   cursor: pointer;
 }
-.card-footer .button--btn-2 {
+.card-footer [btn-style=rect] {
   border-radius: 1rem;
   align-items: center;
   gap: unset;
@@ -263,8 +282,9 @@ ul {
   color: var(--subheading-color);
   transition: all 0.3s ease;
   border: var(--border-thickness-desktop) solid var(--button-border-color);
+  border-radius: 10px;
 }
-.card-footer .button--btn-2:hover {
+.card-footer [btn-style=rect]:hover {
   background-color: var(--label-bg-color-shade);
   cursor: pointer;
 }
@@ -303,13 +323,6 @@ ul {
     width: 144rem;
     padding: 6.7rem 0;
   }
-  [label-style="1"]::after {
-    width: 18rem;
-    height: 4.5rem;
-    font-size: 1.6rem;
-    top: 7.2rem;
-    content: "круглый год";
-  }
   .card {
     width: 107rem;
     min-height: 37rem;
@@ -318,6 +331,7 @@ ul {
     border-radius: 15px;
   }
   .card__img {
+    min-width: 47.3rem;
     max-width: 47.3rem;
     transform: none;
   }

@@ -7,14 +7,6 @@
     padding: 6.7rem 0;
   }
 
-  [label-style='1']::after {
-    width: 18rem;
-    height: 4.5rem;
-    font-size: 1.6rem;
-    top: 7.2rem;
-    content: 'круглый год';
-  }
-
   .card {
     width: 107rem;
     min-height: 37rem;
@@ -23,6 +15,7 @@
     border-radius: 15px;
 
     &__img {
+      min-width: 47.3rem;
       max-width: 47.3rem;
       transform: none;
     }
