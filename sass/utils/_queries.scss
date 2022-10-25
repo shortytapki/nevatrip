@@ -68,8 +68,7 @@
       padding: 0;
       gap: 1.3rem;
 
-      .button,
-      &--btn-2 {
+      .button {
         border: none;
         @include set.button(
           2.3rem,
